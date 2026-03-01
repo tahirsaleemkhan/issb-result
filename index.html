@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ISSB | Result Status</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+font-family: Arial, sans-serif;
+background-color:#f2f2f2;
+}
+
+/* Top Bar */
+.topbar{
+background:#ffffff;
+padding:15px;
+border-bottom:1px solid #ddd;
+text-align:center;
+font-weight:bold;
+font-size:18px;
+}
+
+/* Main Box */
+.container{
+width:350px;
+background:#ffffff;
+margin:80px auto;
+padding:25px;
+border-radius:6px;
+box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+button{
+width:100%;
+padding:10px;
+margin-top:15px;
+background:#007bff;
+color:white;
+border:none;
+border-radius:4px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+/* Result Card */
+.result{
+display:none;
+width:450px;
+margin:40px auto;
+background:#ffffff;
+padding:30px;
+border-radius:6px;
+box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+.result h1{
+color:green;
+}
+
+.green{
+color:green;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+ISSB | Home
+</div>
+
+<div class="container">
+<h3>Result Status</h3>
+
+<input type="text" id="cnic" placeholder="Enter your CNIC No.">
+<input type="text" id="batch" placeholder="Enter your Batch/Chest No">
+
+<button onclick="check()">Submit</button>
+</div>
+
+<div class="result" id="resultBox">
+
+<h1>Congratulations</h1>
+
+<p><b>CNIC:</b> 11101-0779156-5</p>
+<p><b>Name:</b> TAHIR SALEEM KHAN</p>
+<p><b>Father's Name:</b> BEHRAM KHAN</p>
+<p><b>Course:</b> 157 PMA L/C</p>
+<p><b>Batch ID:</b> PKNA/15</p>
+<p><b>Result:</b> <span class="green">RECOMMENDED</span></p>
+
+</div>
+
+<script>
+
+function check(){
+
+var cnic = document.getElementById("cnic").value;
+var batch = document.getElementById("batch").value;
+
+if(cnic==="11101-0779156-5" && batch==="PKNA/15"){
+document.getElementById("resultBox").style.display="block";
+}else{
+alert("No Record Found");
+}
+
+}
+
+</script>
+
+</body>
+</html>
